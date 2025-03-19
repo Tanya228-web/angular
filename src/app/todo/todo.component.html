@@ -1,0 +1,14 @@
+<form #selectform="ngForm"  (ngSubmit)="addtodo(selectform.value)">
+    <input type="text" placeholder="enter your title" name="title" ngModel>
+    <input type="text" placeholder="enter your discription" name="description" ngModel>
+    <button>Add task</button>
+</form>
+
+@for(task of todi;track task){
+    <ul>
+        <li>{{task._id}}</li>
+        <li>{{task.title}}</li>
+        <button (click)="deletetodo(task._id)">Delete</button>
+        
+    </ul>
+}

@@ -1,3 +1,4 @@
+<app-todo></app-todo>
 <!-- <span>tanya</span>
 @for(stud of student; track stud.name){
 
@@ -23,13 +24,13 @@
 <button (click)="decrementvalue()">decrease counter</button>
  -->
 
- <!-- <h1>for loop contextual variable</h1>
+<!-- <h1>for loop contextual variable</h1>
  @for(user of users; 
  track user;
  let i=$index;
  let f=$first;
  let l=$last){ -->
-  <!-- @if(f){
+<!-- @if(f){
     <h1 style="background-color: blueviolet;"> this is our {{i}} and name is{{user}}</h1>
   
 
@@ -46,7 +47,7 @@
   }
 
   -->
-  <!-- @if($even){
+<!-- @if($even){
     <h1 style="background-color: blueviolet;"> this is our {{i+1}} and name is{{user}}</h1>
   
 
@@ -86,7 +87,8 @@
   <button (click)="remove(user.id)" >delete</button>
  
 </ul>
-} --> -->
+} -->
+-->
 <!-- <div *ngIf = "login ; else elseblock">
   <a href="" >logout</a>
 
@@ -101,7 +103,7 @@
 <ng-template #elseblock>
   <a href="#" >Login</a>
 </ng-template> -->
-<h1>Basic routing</h1>
+<!-- <h1>Basic routing</h1>
 <ul>
   <li>
     <a routerLink="/login" >login</a>
@@ -113,4 +115,74 @@
     <a routerLink="/about" >about</a>
   </li>
 </ul>
-<router-outlet/>
+<router-outlet/> -->
+<!-- <h1>template driven forms</h1>
+<form #userform="ngForm" (ngSubmit)="addUser(userform.value)">
+  <input type="text"  #name="ngModel" required  placeholder="enter name" name="name" ngModel>
+  <span *ngIf="name.invalid && name.touched">Name is Required </span>
+  <br>
+  <br>
+  <input type="password" placeholder="enter password" name="password" ngModel>
+  <br><br>
+  <select name="gender" ngModel>
+    <option value="">select gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    </select>
+    <br>
+    <input type="range" min="0" max="20" name="range" ngModel>
+    <br>
+    <button>add user</button>
+
+</form>
+<h3>{{userdetails?.name}}</h3>
+<h3>{{userdetails?.password}}</h3>
+<h3>{{userdetails?.gender}}</h3>
+<h3>{{userdetails?.range}}</h3>
+
+ -->
+<!-- <app-user [user]="username"></app-user> -->
+<!-- <select #selectvalue (change)="usernameChanged(selectvalue.value)" >
+  <option value="">select name</option>
+  <option value="ram">Ram</option>
+  <option value="shyam">shyam</option>
+  <option value="sita">sita</option>
+  </select> -->
+<!-- 
+@for(user of users ; track user){
+  <app-user [user]="user"></app-user>
+
+} -->
+<!-- <app-user user="tanya"></app-user> -->
+<!-- <app-user (handleuser)="getuser($event)"></app-user>
+<h2>{{user}}</h2> -->
+<!-- <h1>call</h1>
+<button (click)="printdata()">gugu</button>
+<button (click)="getsum()">pupu</button>
+<h1>{{val}}</h1> -->
+<!-- <button (click)="datalist()">gugu</button>
+@for(product of products;  track product){
+  
+  <h2>{{product.title}}</h2>
+} -->
+<!-- <form #userform="ngForm" (ngSubmit)="addDetail(userform.value)">
+  <input type="text" placeholder="title" name="title" [ngModel]="todo.title" />
+  <input
+    type="text"
+    placeholder="description"
+    name="description"
+    [ngModel]="todo.description"
+  />
+  <button>Create Todo</button>
+  <button (click)="updatetodo(todo.id)">updates</button>
+</form>
+@for(todo of todi;track todo._id){
+<ul>
+  <li>{{ todo._id }}</li>
+  <li>{{ todo.title }}</li>
+  <li>{{ todo.description }}</li>
+  <button (click)="deletetodo(todo._id)">Delete</button>
+  <button (click)="gettodo(todo._id)">Update</button>
+</ul>
+
+} -->
